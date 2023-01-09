@@ -4,37 +4,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Righteous&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/main.css">
-    <title>Los anillos de poder</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.png">
+    <title>The Monsterous Battle</title>
 </head>
 <body class="body">
+    <header class="header">
+        <h1 class="header-title">The monsterous battle</h1>
+        <h2 class="header-subtitle">Welcome to the nonsense war</h2>
+    </header>
     <main class="main">
-        <h1>Juego</h1>
-        <h2>Los anillos del poder</h2>
-        <p>La Tierra Media está en guerra. En ella lucharán razas leales a Sauron contra otras bondadosas que no quieren que el mal reine sobre sus tierras.</p>
-        <p>Eres un jugador del ejército del bien, no olvides tu misión de ganar la batalla.</p>
-        <div>
-            <select class="js-select-race" name="good-race" id="good-race">
-                <option value="1">Pelosos con fuerza</option>
-                <option value="2">Sureños buenos con fuerza</option>
-                <option value="3">Enanos con fuerza</option>
-                <option value="4">Númenoreanos con fuerza</option>
-                <option value="5">Elfos con fuerza</option>
-            </select>
-            <button class="js-play-btn">Batalla</button>
-            <button class="js-replay-btn">Reiniciar juego</button>
-        </div>
-        <button class="js-result-btn">¡Comienza la batalla!</button>
-        <p class="js-result"></p>
-        <p>Puntuaciones</p>
-        <ul>
-            <li class="js-result-user">Jugador:</li>
-            <li class="js-result-computer">Computadora:</li>
-        </ul>
+        <section class="main-cards">
+            <article class="main-cards-article">
+                <h3 class="cards-title">Good</h3>
+                <div class="card-template good-back js-good-template">
+                    <h4 class="card-per js-good-per">The Good Army</h4>
+                    <div class="card-img js-good-img"></div>
+                    <div class="card-force"><i class="fa-solid fa-hand-fist"></i></div>
+                </div>
+                <p class="card-desc">Choose a warrior amongst the crazy good ones, may the force be with you...</p>
+                <section class="good-form">
+                    <form>
+                        <select class="card-form-select js-select-race" name="good-race" id="good-race">
+                            <option value="0">Choose your warrior</option>
+                            <!--option inputs rendered in javascript with objects-->
+                        </select>
+                    </form>
+                </section>
+                <p class="card-result js-result-user">Player:</p>
+            </article>
+            <button class="main-play-btn js-play-btn">Play</button>
+            <button class="main-restart-btn js-replay-btn hidden">Restart game</button>
+            <article class="main-cards-article">
+                <h3 class="cards-title">Evil</h3>
+                <div class="card-template evil-back js-evil-template">
+                    <h4 class="card-per js-evil-per">The Evil Army</h4>
+                    <div class="card-img js-evil-img"></div>
+                    <div class="card-force"><i class="fa-solid fa-hand-fist"></i></div>
+                </div>
+                <p class="card-desc">Oh no! The evil forces are getting stronger every day, watch out...</p>
+                <button class="card-form-select">Mysterious warrior</button>
+                <p class="card-result js-result-computer">Computer:</p>
+            </article>
+        </section>
+        <section class="main-result">
+            <div class="main-result-desc">
+                <button class="main-result-btn js-result-btn">The battle starts in 1, 2, 3...</button>
+                <p class="js-result">0</p>
+            </div>
+        </section>
     </main>
-    <aside>
-        <img src="" alt="">
-    </aside>
     <script type="text/javascript" src="./js/main.js"></script>
 </body>
 </html>
