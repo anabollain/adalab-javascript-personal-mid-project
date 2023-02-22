@@ -119,6 +119,7 @@
 
 /*Select input*/
 .card-form-select{
+    cursor: pointer;
     width: 15rem;
     height: 2rem;
     border-radius: 0.5rem;
